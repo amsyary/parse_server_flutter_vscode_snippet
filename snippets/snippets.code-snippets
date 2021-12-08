@@ -1,0 +1,22 @@
+{
+        "parse-model": {
+            "prefix": "prsemdl",
+            "body": [
+                "class ${1:Doctor} extends ParseObject implements ParseCloneable {",
+                "${1:Doctor}() : super(_keyTableName);",
+                "${1:Doctor}.clone() : this();",
+                "static const String _keyTableName = '${2:Doctor}';",
+                "@override",
+                "clone(Map<String, dynamic> map) => ${1:Doctor}.clone()..fromJson(map);",
+                "}"
+            ],
+        },
+        "parse-property": {
+            "prefix": "prseprop",
+            "body": [
+                "static const String _${1:name} = '${1:name}';",
+                "${3:String}? get ${1:name} => get<${3:String}>(_${1:name});",
+                "set ${1:name}(${3:String}? value) => set<${3:String}>(_${1:name}, value!);"
+            ]
+        }
+}
