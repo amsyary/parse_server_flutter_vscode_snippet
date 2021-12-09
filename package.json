@@ -3,13 +3,14 @@
     "displayName": "Parse Server Flutter Snippet",
     "description": "snippet for parse server flutter",
     "version": "0.0.1",
+    "icon": "images/icons.png",
+    "publisher":"amsyari",
     "engines": {
         "vscode": "^1.63.0"
     },
     "categories": [
         "Snippets"
     ],
-    "icon": "images/icons.png",
     "contributes": {
         "snippets": [
             {
@@ -17,5 +18,10 @@
                 "path": "./snippets/snippets.code-snippets"
             }
         ]
-    }
+    },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amsyary/parse_server_flutter_vscode_snippet"
+  }
 }
+
