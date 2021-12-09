@@ -1,6 +1,6 @@
 {
-    "name": "parse-server-flutter",
-    "displayName": "parse server flutter",
+    "name": "parse-server-flutter-snippet",
+    "displayName": "Parse Server Flutter Snippet",
     "description": "snippet for parse server flutter",
     "version": "0.0.1",
     "engines": {
@@ -9,6 +9,7 @@
     "categories": [
         "Snippets"
     ],
+    "icon": "images/icons.png",
     "contributes": {
         "snippets": [
             {
