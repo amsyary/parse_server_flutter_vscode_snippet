@@ -2,11 +2,11 @@
     "name": "parse-server-flutter-snippet",
     "displayName": "Parse Server Flutter Snippet",
     "description": "snippet for parse server flutter",
-    "version": "0.0.1",
+    "version": "0.1.5",
     "icon": "images/icons.png",
     "publisher":"amsyari",
     "engines": {
-        "vscode": "^1.63.0"
+        "vscode": "^1.62.3"
     },
     "categories": [
         "Snippets"

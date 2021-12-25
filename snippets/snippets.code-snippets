@@ -1,6 +1,6 @@
 {
     "parse-model": {
-        "prefix": "parsemdl",
+        "prefix": "prsemdl",
         "body": [
             "class ${1:YourModel} extends ParseObject implements ParseCloneable {",
             "${1:YourModel}() : super(_keyTableName);",
@@ -12,11 +12,67 @@
         ],
     },
     "parse-property": {
-        "prefix": "parseprop",
+        "prefix": "prseprop",
         "body": [
-            "static const String _${1:name} = '${1:name}';",
-            "${3:String}? get ${1:name} => get<${3:String}>(_${1:name});",
-            "set ${1:name}(${3:String}? value) => set<${3:String}>(_${1:name}, value!);"
+            "static const String _$1 = '$1';",
+            "${3:String}? get $1 => get<${3:String}>(_$1);",
+            "set $1(${3:String}? value) => set<${3:String}>(_$1, value!);"
         ]
-    }
+    },
+    "parse-query-builder": {
+        "prefix": "parsequery",
+        "body": [
+            "QueryBuilder<${1:ParseObject}> ${2:query} =",
+            "QueryBuilder(${1:ParseObject}())"
+        ],
+        "description": "create query builder parse"
+    },
+    "parse-cloud-function": {
+        "prefix": "parsecloudfunction",
+        "body": [
+            "final ParseCloudFunction ${1:function} = ParseCloudFunction('$2');",
+            "final Map<String, dynamic> ${3:params} = <String, dynamic>{",
+            "'${4:parameter1}': ${5:value},",
+            "};"
+        ],
+        "description": "create cloud function boilerplate"
+    },
+    "parse-api-response-query": {
+        "prefix": "parseapiresquery",
+        "body": [
+            "ParseResponse apiResponse = await $1.query();",
+            "if (apiResponse.success && apiResponse.results!=null) {",
+            "print('$3');",
+            "var list = apiResponse.results!.cast<${2:Model}>();",
+            "return list;",
+            "} else {",
+            "return Future.error(apiResponse.error!.message);",
+            "}"
+        ],
+        "description": "create parse server api response query"
+    },
+    "parse-api-response-execute": {
+        "prefix": "parseapiresexecute",
+        "body": [
+            "final ParseResponse ${1:apiResponse} = await function.execute(parameters: ${2:params});",
+            "if (apiResponse.success && apiResponse.results!=null) {",
+            "print(${3:apiResponse.result});",
+            "} else {",
+            "return Future.error(apiResponse.error!.message);",
+            "}"
+        ],
+        "description": "create parse server api response execute"
+    },
+    "parse-api-response-save": {
+        "prefix": "parseapiressave",
+        "body": [
+            "final ParseResponse ${1:apiResponse} = await $2.save();",
+            "if (apiResponse.success) {",
+            "print('${3:success save}');",
+            "} else {",
+            "return Future.error(apiResponse.error!.message);",
+            "}"
+        ],
+        "description": "create parse server api response save"
+    },
 }

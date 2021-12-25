@@ -15,6 +15,14 @@ for creating property
 - parseprop
   ![Alt Text](https://s10.gifyu.com/images/parseprop.gif)
 
+other snippets
+
+- parsequery
+- parsecloudfunction
+- parseapiresquery
+- parseapiresexecute
+- parseapiressave
+
 ## Authors
 
 - [@amsyary](https://github.com/amsyary)
